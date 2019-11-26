@@ -6,12 +6,12 @@ import { Container } from './styles.js';
 
 class ContainerLoginForm extends React.Component {
   handleSubmit = e => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
+    // e.preventDefault();
+    // this.props.form.validateFields((err, values) => {
+    //   if (!err) {
+    //     console.log('Received values of form: ', values);
+    //   }
+    // });
   };
 
   render() {
@@ -54,13 +54,15 @@ class ContainerLoginForm extends React.Component {
             <a className="login-form-forgot" href="">
               Forgot password
             </a>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
-            >
-              Log in
-            </Button>
+            <Link to="/panel">
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="login-form-button"
+              >
+                Log in
+              </Button>
+            </Link>
             Or{' '}
             <Link to="/signup">
               <a href="">register now!</a>
