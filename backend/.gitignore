@@ -1,2 +1,2 @@
 *.pyc
-settings.py
+./edutech/edutech/settings.py
