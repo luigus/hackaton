@@ -1,12 +1,9 @@
-from django.shortcuts import render
-from rest_framework import generics
-from .models import Music
-from .serializers import MusicSerializer
 
+from rest_framework import viewsets
 
-class AlunoList(generics.ListCreateAPIView):
+from .models import Aluno
+from .serializers import AlunoSerializer
 
+class AlunoViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Aluno.objects.all()
     serializer_class = AlunoSerializer
-
-    
