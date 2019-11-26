@@ -5,6 +5,7 @@ SECRET_KEY = 'pa6_u&&3fy918o-4h54&)5wdh=%##6cp*4wv%7gw_^=^-t$_9$'
 
 DEBUG = True
 ALLOWED_HOSTS = []
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -12,6 +13,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'student',
 ]
 
 MIDDLEWARE = [
@@ -48,9 +50,9 @@ WSGI_APPLICATION = 'edutech.wsgi.application'
 DATABASES = {
     'default': { 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'edutec',
-        'USER': 'django', 
-        'PASSWORD': 'sua_senha',
+        'NAME': 'eductec',
+        'USER': 'root', 
+        'PASSWORD': 'qwerty15243',
         'HOST': 'localhost'
     } 
 }
