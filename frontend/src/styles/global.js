@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import colors from './colors';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -13,9 +14,9 @@ export const GlobalStyle = createGlobalStyle`
   body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    background: #181818;
+    background: ${colors.background}
     font-family: 'Roboto', sans-serif;
-    color: #FFF;
+    color: ${colors.text};
   }
   button {
     cursor: pointer;
