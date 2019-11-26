@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 
-// import { Container } from './styles';
+import { Container, Title } from './styles';
+import LoginForm from './components/ContainerForm';
 
 export default class Login extends Component {
   render() {
-    return <div />;
+    return (
+      <Container>
+        <Title>EducTech</Title>
+        <LoginForm />
+      </Container>
+    );
   }
 }
