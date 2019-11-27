@@ -5,10 +5,10 @@ import locale from 'antd/es/date-picker/locale/pt_BR';
 import {
   Container,
   Title,
-  NForm,
+  Scrollbar,
   NButton,
   NDatePicker,
-  FormContent,
+  FormItem,
 } from './styles';
 
 class SignUpForm extends Component {
@@ -58,57 +58,63 @@ class SignUpForm extends Component {
       <Container>
         <Title>EducTech</Title>
 
-        <NForm className="login-form">
-          <Form.Item label="Nome">
-            {getFieldDecorator('name', {})(<Input />)}
-          </Form.Item>
+        <Scrollbar>
+          <Form className="login-form">
+            <FormItem label="Nome">
+              {getFieldDecorator('name', {})(<Input />)}
+            </FormItem>
 
-          <Form.Item label="E-mail">
-            {getFieldDecorator('email', {})(<Input />)}
-          </Form.Item>
+            <FormItem label="E-mail">
+              {getFieldDecorator('email', {})(<Input />)}
+            </FormItem>
 
-          <Form.Item label="Data de Nascimento">
-            <NDatePicker format={'DD/MM/YYYY'} locale={locale} placeholder="" />
-          </Form.Item>
+            <FormItem label="Data de Nascimento">
+              <NDatePicker
+                format={'DD/MM/YYYY'}
+                locale={locale}
+                placeholder=""
+              />
+            </FormItem>
 
-          <Form.Item label="Estado">
-            <Select>
-              {states.map(item => (
-                <Option key={item.id} value={item.id}>
-                  {item.label}
-                </Option>
-              ))}
-            </Select>
-          </Form.Item>
+            <FormItem label="Estado">
+              <Select>
+                {states.map(item => (
+                  <Option key={item.id} value={item.id}>
+                    {item.label}
+                  </Option>
+                ))}
+              </Select>
+            </FormItem>
 
-          <Form.Item label="Cidade">
-            {getFieldDecorator('city', {})(<Input />)}
-          </Form.Item>
+            <FormItem label="Cidade">
+              {getFieldDecorator('city', {})(<Input />)}
+            </FormItem>
 
-          <Form.Item label="Escola">
-            {getFieldDecorator('school', {})(<Input />)}
-          </Form.Item>
+            <FormItem label="Escola">
+              {getFieldDecorator('school', {})(<Input />)}
+            </FormItem>
 
-          <Form.Item label="Série">
-            <Select>
-              {series.map(item => (
-                <Option key={item.id} value={item.id}>
-                  {item.label}
-                </Option>
-              ))}
-            </Select>
-          </Form.Item>
+            <FormItem label="Série">
+              <Select>
+                {series.map(item => (
+                  <Option key={item.id} value={item.id}>
+                    {item.label}
+                  </Option>
+                ))}
+              </Select>
+            </FormItem>
 
-          <Form.Item label="Senha">
-            {getFieldDecorator('password', {})(<Input.Password />)}
-          </Form.Item>
+            <FormItem label="Senha">
+              {getFieldDecorator('password', {})(<Input.Password />)}
+            </FormItem>
+          </Form>
+        </Scrollbar>
 
-          <Form.Item>
-            <NButton type="primary" htmlType="submit">
-              Cadastrar
-            </NButton>
-          </Form.Item>
-        </NForm>
+        <FormItem>
+          <NButton type="primary" htmlType="submit">
+            Cadastrar
+          </NButton>
+        </FormItem>
       </Container>
     );
   }
