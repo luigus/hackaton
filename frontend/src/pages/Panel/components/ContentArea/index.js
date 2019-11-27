@@ -5,14 +5,6 @@ import { Container, Description, Content, Title, Text } from './styles';
 import ProblemImage from '../../../../assets/images/gamification-info.jpg';
 
 export default class ContentArea extends Component {
-  state = {
-    data: [{}],
-  };
-
-  componentDidMount() {
-    // this.fetchData();
-  }
-
   render() {
     return (
       <Container>
@@ -23,7 +15,7 @@ export default class ContentArea extends Component {
         <Divider />
         <Content>
           <Title>Problema</Title>
-          <Card cover={<img src={ProblemImage} />} />
+          <Card cover={<img src={ProblemImage} alt="Problem Description" />} />
           <Text>
             Um planeta (do grego πλανήτης [planεːtεːs] viajante) é um corpo
             celeste que orbita uma estrela ou um remanescente de estrela, com
