@@ -1,4 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+
+import 'antd/dist/antd.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
+
 import colors from './colors';
 import 'antd/dist/antd.css';
 
@@ -15,7 +19,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
-    background: ${colors.background}
+    background: ${colors.background};
     font-family: 'Roboto', sans-serif;
     color: ${colors.text};
   }
