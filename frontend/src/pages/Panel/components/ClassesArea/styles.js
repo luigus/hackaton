@@ -17,6 +17,7 @@ export const Content = styled.div`
 
 export const NList = styled(List)`
   width: 100% !important;
+  cursor: pointer;
 
   .anticon {
     margin: 0 10px;

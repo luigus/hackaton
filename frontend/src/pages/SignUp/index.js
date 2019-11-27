@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Input, Select } from 'antd';
+import { Link } from 'react-router-dom';
 import locale from 'antd/es/date-picker/locale/pt_BR';
 
 import {
@@ -111,9 +112,11 @@ class SignUpForm extends Component {
         </Scrollbar>
 
         <FormItem>
-          <NButton type="primary" htmlType="submit">
-            Cadastrar
-          </NButton>
+          <Link to="/panel">
+            <NButton type="primary" htmlType="submit">
+              Cadastrar
+            </NButton>
+          </Link>
         </FormItem>
       </Container>
     );
