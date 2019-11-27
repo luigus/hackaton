@@ -3,6 +3,7 @@ import { List, Avatar } from 'antd';
 
 import { Container, Content } from './styles';
 import avatar from '../../../../assets/images/avatar.jpeg';
+import api from '../../../../services/api';
 
 export default class UserArea extends Component {
   state = {
@@ -12,7 +13,46 @@ export default class UserArea extends Component {
   componentDidMount() {
     this.fetchData();
   }
-  fetchData = () => {
+  fetchData = async () => {
+    try {
+      const response = await api.get('/alunos-api/alunos/2');
+      console.log(response);
+      // const response = {
+      //   name: 'Tiago de Alencar',
+      //   city: 'Fortaleza',
+      //   school: 'Dom Bosco',
+      //   level: 'Nerd',
+      //   score: '1370',
+      //   active_days: '27',
+      // };
+      // const data = [
+      //   { title: 'Name:', description: response.name },
+      //   { title: 'City:', description: response.city },
+      //   { title: 'School:', description: response.school },
+      //   { title: 'Level:', description: response.level },
+      //   { title: 'Score:', description: response.score },
+      //   { title: 'Active days:', description: response.active_days },
+      // ];
+      // this.setState({ data });
+    } catch (err) {
+      const response = {
+        name: 'Tiago de Alencar',
+        city: 'Fortaleza',
+        school: 'Dom Bosco',
+        level: 'Nerd',
+        score: '1370',
+        active_days: '27',
+      };
+      const data = [
+        { title: 'Name:', description: response.name },
+        { title: 'City:', description: response.city },
+        { title: 'School:', description: response.school },
+        { title: 'Level:', description: response.level },
+        { title: 'Score:', description: response.score },
+        { title: 'Active days:', description: response.active_days },
+      ];
+      this.setState({ data });
+    }
     const response = {
       name: 'Tiago de Alencar',
       city: 'Fortaleza',

@@ -25,4 +25,6 @@ export const Title = styled.div`
   justify-content: center;
 `;
 
-export const Text = styled.div``;
+export const Text = styled.div`
+  margin-top: 30px;
+`;

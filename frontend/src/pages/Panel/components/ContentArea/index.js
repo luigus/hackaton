@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Divider } from 'antd';
+import { Divider, Card } from 'antd';
 
 import { Container, Description, Content, Title, Text } from './styles';
+import ProblemImage from '../../../../assets/images/gamification-info.jpg';
 
 export default class ContentArea extends Component {
   state = {
@@ -22,6 +23,7 @@ export default class ContentArea extends Component {
         <Divider />
         <Content>
           <Title>Problema</Title>
+          <Card cover={<img src={ProblemImage} />} />
           <Text>
             Um planeta (do grego πλανήτης [planεːtεːs] viajante) é um corpo
             celeste que orbita uma estrela ou um remanescente de estrela, com
