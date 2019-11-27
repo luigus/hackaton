@@ -17,4 +17,10 @@ Outro elemento de gameficação seria o "titulo" do estudante, que baseado em su
 
 Nós abordamos o ator Aluno, com intuito de chamar atenção com o estilo da plataforma de aprendizagem.
 
+Então nossa estratégia vai ser bottom up, partindo do aluno para os cargos gerentes das unidades escolares.
+
+Nossa proposta e que os professores utilizem o desempenho dos alunos no EducTech para bonificá-los de alguma maneira, com pontos extras por exemplo, assim os alunos dariam atenção a plataforma.
+
+Estamos apostando na gameficação e uso constante do app pelos alunos assim daria para termos rank de alunos, classes e ate mesmo escolas, com esse ranking o governo poderia bonificar as escolas com alguma verba.
+
 Com a utilização de algumas métricas como a quantidade de aluno por escola poderia ser uma porta para implantar a ideia oficialmente nas escolas.
