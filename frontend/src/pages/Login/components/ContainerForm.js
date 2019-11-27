@@ -2,27 +2,21 @@ import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';
 
-import { Container } from './styles.js';
+import { Container, Buttons } from './styles.js';
 
 class ContainerLoginForm extends React.Component {
-  handleSubmit = e => {
-    // e.preventDefault();
-    // this.props.form.validateFields((err, values) => {
-    //   if (!err) {
-    //     console.log('Received values of form: ', values);
-    //   }
-    // });
-  };
+  handleSubmit = e => {};
 
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
       <Container>
-        <Form onSubmit={this.handleSubmit} className="login-form">
+        <Form onSubmit={this.handleSubmit} style={{ width: '70%' }}>
           <Form.Item label="E-mail">
-            {getFieldDecorator('email', {
-              // rules: [{ required: true, message: 'Please input your e-mail!' }],
-            })(
+            {getFieldDecorator(
+              'email',
+              {}
+            )(
               <Input
                 prefix={
                   <Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />
@@ -33,9 +27,7 @@ class ContainerLoginForm extends React.Component {
           </Form.Item>
           <Form.Item label="Password">
             {getFieldDecorator('password', {
-              rules: [
-                // { required: true, message: 'Please input your Password!' },
-              ],
+              rules: [],
             })(
               <Input
                 prefix={
@@ -47,26 +39,28 @@ class ContainerLoginForm extends React.Component {
             )}
           </Form.Item>
           <Form.Item>
-            {getFieldDecorator('remember', {
-              valuePropName: 'checked',
-              initialValue: true,
-            })(<Checkbox>Remember me</Checkbox>)}
-            <a className="login-form-forgot" href="">
-              Forgot password
-            </a>
-            <Link to="/panel">
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="login-form-button"
-              >
-                Log in
-              </Button>
-            </Link>
-            Or{' '}
-            <Link to="/signup">
-              <a href="">register now!</a>
-            </Link>
+            <Buttons>
+              <Link to="/panel" style={{ width: '100%' }}>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  style={{ width: '100%' }}
+                  size="large"
+                >
+                  Log in
+                </Button>
+              </Link>
+              <Link to="/signup" style={{ width: '100%' }}>
+                <Button
+                  type="default"
+                  htmlType="submit"
+                  style={{ width: '100%', marginTop: '20px' }}
+                  size="large"
+                >
+                  register now!
+                </Button>
+              </Link>
+            </Buttons>
           </Form.Item>
         </Form>
       </Container>
